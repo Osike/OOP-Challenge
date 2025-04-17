@@ -26,9 +26,9 @@ class Pet:
 
     def get_status(self):
         print(f"\n🔎 {self.name}'s Status:")
-        print(f"Hunger: {self.hunger}/10")
-        print(f"Energy: {self.energy}/10")
-        print(f"Happiness: {self.happiness}/10")
+        print(f"Hunger😋: {self.hunger}/10")
+        print(f"Energy💪: {self.energy}/10")
+        print(f"Happiness🥳: {self.happiness}/10")
 
     # BONUS 
     def train(self, trick):
