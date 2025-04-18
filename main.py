@@ -22,6 +22,12 @@ def main():
     print(f"{my_pet.name}'s current status:")
     my_pet.get_status()
     my_pet.show_tricks()
+    my_pet.get_mood()
+    my_pet.pass_time(3)
+  
+
+    
+
 
 if __name__ == "__main__":
     main()

@@ -24,6 +24,7 @@ class Pet:
         else:
             print(f"{self.name} is too tired to play. Let them sleep first.")
 
+
     def get_status(self):
         print(f"\n🔎 {self.name}'s Status:")
         print(f"Hunger😋: {self.hunger}/10")
@@ -40,3 +41,22 @@ class Pet:
             print(f"{self.name} knows the following tricks: {', '.join(self.tricks)}")
         else:
             print(f"{self.name} hasn't learned any tricks yet.")
+
+    def get_mood(self):
+        if self.hunger > 7:
+            mood = "hungry 😫"
+        elif self.energy < 3:
+            mood = "tired 😴"
+        elif self.happiness > 7:
+            mood = "happy 😄"
+        elif self.happiness < 3:
+            mood = "sad 😢"
+        else:
+            mood = "okay 🙂"
+        print(f"{self.name} is currently feeling {mood}.")
+
+    def pass_time(self, hours=1):
+        self.hunger = min(10, self.hunger + hours)
+        self.energy = max(0, self.energy - hours)
+        self.happiness = max(0, self.happiness - (hours // 2))
+        print(f"{hours} hours passed... Status updated.")
